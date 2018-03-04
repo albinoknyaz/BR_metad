@@ -9,4 +9,4 @@ Futher work:
 1. Give to charmm gui monomer (resting state 5B6V) with ret. When it offer to rename ret, we can name it as LYR (!Crarmm36 has LYR in topology, so we can use it). Potentional problem: changes in numbers of atoms. Create cell with X and Y about 30 A (more than 2 areas of protein). Membrane will be symmetric (maybe one day we’ll find same data or importance of asymmetric membrane). 15 mM NaCl around system.
 2. Optimisation of system
 3. Create 14 membranes with BR.
-Note: compare termophilic and nontermothilic membranes (https://academic.oup.com/femsre/article/40/1/133/2467617)
+Note: compare thermophilic and nontermothilic membranes (https://academic.oup.com/femsre/article/40/1/133/2467617)
