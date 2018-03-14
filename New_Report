@@ -1,0 +1,25 @@
+14.03.
+We want to compare labels of RET atoms in tconv.pdb (initial structure) and step5_assembly.pdb and rename atoms in initial struature. 
+lyr c1= ret c15
+lyr c2= ret c14
+lyr c3= ret c13
+lyr c4= ret c20
+lyr c5= ret c12
+lyr c6= ret c11
+lyr c7= ret c10
+lyr c80= ret c9 (?)
+lyr c8= ret c19
+lyr c9= ret c8
+lyr c10= ret c7
+lyr c11= ret c6
+lyr c12= ret c5
+lyr c14= ret c4
+lyr c15= ret c3
+lyr c16= ret c2
+lyr c17= ret c1
+lyr c18= ret c17
+lyr c10= ret c16
+lyr c13= ret c18
+Create file tconv_rename.pbd, push it in charmm gui. Compare new step5_assembly LYR and tconv_rename (extentions/analysis/RMSD calculator/resname LYR align) and get disdainfully small value of RMSD. 
+(Chains length was taken from http://www.biologia.uniba.it/fisiologia/corcelli/en/lipidi/home.html, lipid composition as like in E.colli membrane)/
+We started molecule dinamics with commands diven in README_1 (gromax). README_1 and README are different: replace gmx to gmx_plumed, instead cycle makes 6 sequential commands, becouse this cycle are wrotten on csh. 
