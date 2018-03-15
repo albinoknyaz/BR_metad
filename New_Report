@@ -25,7 +25,8 @@ Create file tconv_rename.pbd, push it in charmm gui. Compare new step5_assembly 
 We started molecule dinamics with commands diven in README_1 (gromax). README_1 and README are different: replace gmx to gmx_plumed, instead cycle makes 6 sequential commands, becouse this cycle are wrotten on csh. 
 
 15.03
-There are three themes about bR. First one: establish diffusion potential of higrogen transfer through the peotein (method of random positiins and calculating influence of free place factor and electrostatic interence.
+There are three topics of study. First one: establish diffusion potential of higrogen transfer through the peotein (method of random positiins and calculating influence of free place factor and electrostatic interence.
 The second one: phenomenon of function disability obtaining during the rise in temperature before process of denaturation. If may be coused by different reasons, as like too much increase of entrophy (proton can't interact with residies). Also if may be coused by unusual conformational changes in crucial amino acids.
+I forgot about third theme :(
 My hometask: find any onfotmation about bR and another photosencinle bacterial pomps, esspecially of tehermophilic organosms. 
-Calculation of 20 ns dinamics was started (changes in toplogy:
+Calculation of 20 ns dinamics was started (changes in toplogy: 10 000 step = 20 ns, thermostat v-rescale, becouse our system consist of compounds with different heat capacity).
