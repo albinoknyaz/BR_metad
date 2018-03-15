@@ -23,3 +23,9 @@ lyr c13= ret c18
 Create file tconv_rename.pbd, push it in charmm gui. Compare new step5_assembly LYR and tconv_rename (extentions/analysis/RMSD calculator/resname LYR align) and get disdainfully small value of RMSD. 
 (Chains length was taken from http://www.biologia.uniba.it/fisiologia/corcelli/en/lipidi/home.html, lipid composition as like in E.colli membrane)/
 We started molecule dinamics with commands diven in README_1 (gromax). README_1 and README are different: replace gmx to gmx_plumed, instead cycle makes 6 sequential commands, becouse this cycle are wrotten on csh. 
+
+15.03
+There are three themes about bR. First one: establish diffusion potential of higrogen transfer through the peotein (method of random positiins and calculating influence of free place factor and electrostatic interence.
+The second one: phenomenon of function disability obtaining during the rise in temperature before process of denaturation. If may be coused by different reasons, as like too much increase of entrophy (proton can't interact with residies). Also if may be coused by unusual conformational changes in crucial amino acids.
+My hometask: find any onfotmation about bR and another photosencinle bacterial pomps, esspecially of tehermophilic organosms. 
+Calculation of 20 ns dinamics was started (changes in toplogy:
