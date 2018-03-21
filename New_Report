@@ -30,3 +30,53 @@ The second one: phenomenon of function disability obtaining during the rise in t
 I forgot about third theme :(
 My hometask: find any onfotmation about bR and another photosencinle bacterial pomps, esspecially of tehermophilic organosms. 
 Calculation of 20 ns dinamics was started (changes in toplogy: 10 000 step = 20 ns, thermostat v-rescale, becouse our system consist of compounds with different heat capacity).
+
+
+21.03
+Deuterium Order Parameters
+
+14 & a  CD1 
+14 & a  CD2
+14 & a  CD3 
+14 & a  CD4 
+14 & a  CD5 
+14 & a  CD6 
+14 & a  CD7 
+14 & a  CD8 
+14 & a  CD9 
+14 & a  CD10 
+14 & a  CD11 
+14 & a  CD12 
+14 & a  CD13 
+14 & a  CD14 
+14 & a  CD15 
+14 & a  CD16 
+14 & a  CD17
+del 0-19
+gmx_plumed make_ndx -f step7_1.tpr -o pcmlD.ndx
+gmx_plumed order -s step7_1.tpr -f step7_1.trr -n pcmlD.ndx -d z -od deuter_sn1_D.xvg
+
+
+
+Lateral Diffusion of Lipids
+
+ gmx_plumed make_ndx -f step7_1.tpr -o pC.ndx
+16 & a P1
+del 0-19
+name 0 PMCL_P
+q
+gmx_plumed msd -s step7_1.tpr -f step7_1.trr -n pC.ndx -lateral z
+
+D[    DPPE_P] 0.002705 (+/- 0.00225) 1e-5 cm^2/s
+D[    DPPG_P] 0.003455 (+/- 0.0004402) 1e-5 cm^2/s
+D[   PMCL1_p] 0.004231 (+/- 0.001338) 1e-5 cm^2/s
+
+
+a  CD1 | a  CD2 | a  CD3 | a  CD4 | a  CD5 | a  CD6 | a  CD7 | a  CD8 | a  CD9 | a  CD10 | a  CD11 | a  CD12 | a  CD13 | a  CD14 | a  CD15 | a  CD16 | a CD17
+
+
+a  CD1 | a  CD2 | a  CD3 | a  CD4 | a  CD5 | a  CD6 | a  CD7 | a  CD8 | a  CD9 | a  CD10 | a  CD11 | a  CD12 | a  CD13 | a  CD14 | a  CD15 | a  CD16 | a  CD17 | a C31 | a C32 | a C33 | a C34 | a C35 | a C36 | a C37 | a C38 | a C39 | a C310 | a C311 | a C312 | a C313 | a C314 | a C315 | a C316 | a C317
+
+HE a O11 | a O12 | a O13 | a O14 | a O21 | a O31 | a C1 | a C2 | a C3 | a C11 | a C12 | a N | a P
+a C3 | a C2 | a C1 | a C11 | a C12 | a C13 | a C31 | a C32 | a C33 | a P1 | a O11 | a O12 | a O13 | a O14 | a P3 | a O31 | a O32 | a O33 HC
+a O21 | a O31 | a O11 | a O12 | a O13 | a O14 | a OC2 | a OC3 | a C1 | a C2 | a C3 | a P | a C11 | a C12 | a C13  G
