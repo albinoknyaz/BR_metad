@@ -1,0 +1,15 @@
+
+path_plumed>>
+ p1: PATHMSD REFERENCE=selected_traject.pdb  LAMBDA=500.0 NEIGH_STRIDE=4 NEIGH_SIZE=8
+ PRINT ARG=p1.sss,p1.zzz STRIDE=1 FILE=colvar FMT=%8.4f
+
+#   plumed driver-float --plumed path.plumed --mf_xtc ../md_0_1.xtc 
+
+path_metad>>
+ p1: PATHMSD REFERENCE=selected_traject.pdb  LAMBDA=500.0 NEIGH_STRIDE=4 NEIGH_SIZE=8
+ PRINT ARG=p1.sss,p1.zzz STRIDE=500 FILE=colvar_metad_100ns FMT=%8.4f
+ METAD ARG=p1.sss SIGMA=0.2 HEIGHT=0.3 PACE=500 LABEL=restraint FILE=HILLS_100ns
+
+#   gmx grompp -f ../md.mdp -c ../Structures/1.gro -p ../Structures/topol.top -o md.tpr
+#   gmx_plumed mdrun -ntmpi 1 -deffnm md -plumed path_metad.dat
+#   plumed sum_hills --hills HILLS
