@@ -13,3 +13,19 @@ path_metad>>
 #   gmx grompp -f ../md.mdp -c ../Structures/1.gro -p ../Structures/topol.top -o md.tpr
 #   gmx_plumed mdrun -ntmpi 1 -deffnm md -plumed path_metad.dat
 #   plumed sum_hills --hills HILLS
+
+
+abmd.dat
+ DISTANCE ATOMS=3,5 LABEL=d1
+ ABMD ARG=d1 TO=1.0 KAPPA=5.0 LABEL=abmd
+ PRINT ARG=abmd.bias,abmd.d1_min FILE=colvar_abmd FMT=%8.4f
+command line: 
+ gmx grompp -f md.mdp -c 1.gro -p topol.top -o md.tpr
+ gmx_plumed mdrun -deffnm md -plumed abmd.dat
+
+restr.dat (Umbrella sampling):
+ DISTANCE ATOMS=3,5 LABEL=d1
+ restraint-d1: RESTRAINT ARG=d1 KAPPA=500 AT=-0.3
+ PRINT STRIDE=10 ARG=d1,restraint-d1.bias FILE=COLVAR_restr FMT=%8.4f
+command line:
+ -//-
